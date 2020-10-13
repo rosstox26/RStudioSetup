@@ -2,29 +2,43 @@
 title: "RStudio GitHub Setup"
 author: "Sanjeev Kumar"
 date: "10/13/2020"
-output: html_document
+output:
+  pdf_document: default
+  html_document: default
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## R Markdown
+## RStudio + GitHub
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+So let's say that you have to work on a group project for your data analytics class. You have a dataset for the project - and you are going to write a project report as a RMarkdown file and build data analysis models using R. The problem - you need to do this collaboratively as a team of five, globally distributed, across time zones, students.
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+Clearly, each student working independently and then merging code/files together is sub-optimal. You are bound to repeat things, do stuff that will not match other students, have different approaches that may not merge well and so on. Sharing files over email, google drive etc just introduces needless complexity. What you need to do is what software development teams all over the world so - collaborate over a cloud based versioning and remote collaboration plaforms like GitHub.
 
-```{r cars}
-summary(cars)
-```
+This is your absolutely bare-bones, just enough to get you started, beginners guide to how to collaborate on R based group projects using RStudio and GitHub.
 
-## Including Plots
+## Let's Begin with the Building Blocks
 
-You can also embed plots, for example:
+Let's get the basic out of the way:
 
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
+- You have installed R. If not, you can get it from here: https://cran.rstudio.com/.
+- You have installed RStudio. If not, you can get it from here: https://rstudio.com/products/rstudio/download/. Go for the free, Desktop version.
+- You have installed Git in your machine. If not, get the download for your operating system here: https://git-scm.com/downloads. You can install git with all the default options. We will use git only through the RStudio GUI so most of the options are not relevant for us.
+- You have created an account on GitHub.com. If not, go create one here: https://github.com/join
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+Alright - now you are ready.
+
+## Configure RStudio for Git/GitHub
+
+We need to make sure that our RStudio session is set up to work with Git/GitHub. Go to Tools > Global Options > Git/SVN. Ensure that:
+
+- the option 'Enable version control interface for RStudio Projects' is checked.
+- Git Executable is showing the path to the your installed Git.
+- SVN and RSA options are not relevant for us - you can ignore those.
+
+
+
+
+It is important to note that RStudio's Git/GitHub functionality is tied to the idea of a "project". Each project has 
