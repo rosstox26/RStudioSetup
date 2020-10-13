@@ -3,8 +3,8 @@ title: "RStudio GitHub Setup"
 author: "Sanjeev Kumar"
 date: "10/13/2020"
 output:
-  pdf_document: default
   html_document: default
+  pdf_document: default
 ---
 
 ```{r setup, include=FALSE}
@@ -17,7 +17,7 @@ So let's say that you have to work on a group project for your data analytics cl
 
 Clearly, each student working independently and then merging code/files together is sub-optimal. You are bound to repeat things, do stuff that will not match other students, have different approaches that may not merge well and so on. Sharing files over email, google drive etc just introduces needless complexity. What you need to do is what software development teams all over the world so - collaborate over a cloud based versioning and remote collaboration plaforms like GitHub.
 
-This is your absolutely bare-bones, just enough to get you started, beginners guide to how to collaborate on R based group projects using RStudio and GitHub.
+> This is your absolutely bare-bones, just enough to get you started, beginners guide to how to collaborate on R based group projects using RStudio and GitHub.
 
 ## Let's Begin with the Building Blocks
 
@@ -34,11 +34,13 @@ Alright - now you are ready.
 
 We need to make sure that our RStudio session is set up to work with Git/GitHub. Go to Tools > Global Options > Git/SVN. Ensure that:
 
-- the option 'Enable version control interface for RStudio Projects' is checked.
+- Option `Enable version control interface for RStudio Projects` is **checked**.
 - Git Executable is showing the path to the your installed Git.
 - SVN and RSA options are not relevant for us - you can ignore those.
 
+In my RStudio session, the dialog box looks like the following:
+
+![Global Options Setup for RStudio](GlobalOptions.JPG)
 
 
-
-It is important to note that RStudio's Git/GitHub functionality is tied to the idea of a "project". Each project has 
+It is important to note that RStudio's Git/GitHub functionality is tied to the idea of a "RStudio Project". Each project is a self contained unit that lives in a specific folder. The project folder has a git repository that can be synced with a cloud based remote repository. 
