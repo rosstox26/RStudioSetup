@@ -1,7 +1,7 @@
 ---
 title: "RStudio GitHub Setup"
-author: "Sanjeev Kumar"
-date: "10/13/2020"
+author: "Sanjeev Kumar, Ross School of Business, Univ of Michigan"
+date: "Prepared on 10/13/2020"
 output:
   html_document: default
   pdf_document: default
@@ -63,6 +63,13 @@ Sign into GitHub and click the button for creating a new repository. The screen 
 
 Once your repository is creted, you can click the button named `Code` to reveal the needed information for cloning the repository to your RStudio. We will use HTTPS as our cloning mechanism. Copy the HTTPS address shown.
 
-![Cloning Repository Using HTTPS](GetCloneAddress.PNG)
+![Cloning Repository Using HTTPS](GetCloneAddress.PNG){width=70%}
 
-Now we need to use the HTTPS cloning address in RStudio. Click File > New Project   
+Now we need to use the HTTPS cloning address in RStudio. Click File > New Project > Version Control > Git. This will get you to the dialog box shown below.
+
+![Clone Git Repo in RStudio](CloneGitRepo.PNG){width=40%}
+
+Paste the HTTPS clone address into the Repository URL field. It is best to not change the Project Directory Name - it will be same as the GitHub repo name by default. You can of course choose the location in your local file structure where you want to save the project via the Browse button. It is also preferable to check the Open in a New Session Option. That's it - now click the Create Project button. RStudio will create your project and download all the content from GitHub.
+
+## Working in RStudio with Git/GitHub Integration
+
