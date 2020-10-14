@@ -40,8 +40,8 @@ We need to make sure that our RStudio session is set up to work with Git/GitHub.
 
 In my RStudio session, the dialog box looks like the following:
 
-![Global Options Setup for RStudio](GlobalOptions.JPG){width=50%}
 
+![Global Options Setup for RStudio](GlobalOptions.JPG){width=40%}
 
 ## Easiest Path to a GitHub + RStudio Integration
 
@@ -49,7 +49,8 @@ It is important to note that RStudio's Git/GitHub functionality is tied to the i
 
 ### Create an Empty Repository in GitHub
 
-- Sign into GitHub and click the button for creating a new repository
+Sign into GitHub and click the button for creating a new repository. The screen should look like the image below:
+
 
 ![Create Empty Repository in GitHub](CreateRepo.PNG){width=50%}
 
@@ -58,3 +59,10 @@ It is important to note that RStudio's Git/GitHub functionality is tied to the i
 - Choose either `Public` or `Private` as your repository's access level. If you are unsure, choose `Public`
 - Choose the option for `Add a Readme File` so that you have some material in your repo and its not *completely* empty
 
+### Clone the Repository in RStudio
+
+Once your repository is creted, you can click the button named `Code` to reveal the needed information for cloning the repository to your RStudio. We will use HTTPS as our cloning mechanism. Copy the HTTPS address shown.
+
+![Cloning Repository Using HTTPS](GetCloneAddress.PNG)
+
+Now we need to use the HTTPS cloning address in RStudio. Click File > New Project   
