@@ -4,14 +4,17 @@ author: "Sanjeev Kumar, Ross School of Business, Univ of Michigan"
 date: "Prepared on 10/13/2020"
 output:
   pdf_document: default
-  html_document: default
+  html_document: 
+    number_sections: false
+    toc: yes
+    theme: cerulean
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-### RStudio + GitHub
+# RStudio + GitHub
 
 So let's say that you have to work on a group project for your data analytics class. You have a dataset for the project - and you are going to write a project report as a RMarkdown file and build data analysis models using R. The problem - you need to do this collaboratively as a team of five, globally distributed, across time zones, students.
 
@@ -19,7 +22,7 @@ Clearly, each student working independently and then merging code/files together
 
 > This is your absolutely bare-bones, just enough to get you started, beginners guide to how to collaborate on R based group projects using RStudio and GitHub.
 
-### Let's Begin with the Building Blocks
+# Let's Begin with the Building Blocks
 
 Let's get the basic out of the way:
 
@@ -30,7 +33,7 @@ Let's get the basic out of the way:
 
 Alright - now you are ready.
 
-### Configure RStudio for Git/GitHub
+## Configure RStudio for Git/GitHub
 
 We need to make sure that our RStudio session is set up to work with Git/GitHub. Go to Tools > Global Options > Git/SVN. Ensure that:
 
@@ -43,11 +46,11 @@ In my RStudio session, the dialog box looks like the following:
 
 ![Global Options Setup for RStudio](GlobalOptions.JPG){width=40%}
 
-### Easiest Path to a GitHub + RStudio Integration
+# Easiest Path to a GitHub + RStudio Integration
 
 It is important to note that RStudio's Git/GitHub functionality is tied to the idea of a "RStudio Project". Each project is a self contained unit that lives in a specific folder. The project folder has a git repository that can be synced with a cloud based remote repository. The easiet path to creating a RStudio Project that is synced with GitHub is follow the step by step process explained below.
 
-#### Create an Empty Repository in GitHub
+## Create an Empty Repository in GitHub
 
 Sign into GitHub and click the button for creating a new repository. The screen should look like the image below:
 
@@ -59,7 +62,7 @@ Sign into GitHub and click the button for creating a new repository. The screen 
 - Choose either `Public` or `Private` as your repository's access level. If you are unsure, choose `Public`
 - Choose the option for `Add a Readme File` so that you have some material in your repo and its not *completely* empty
 
-#### Clone the Repository in RStudio
+## Clone the Repository in RStudio
 
 Once your repository is creted, you can click the button named `Code` to reveal the needed information for cloning the repository to your RStudio. We will use HTTPS as our cloning mechanism. Copy the HTTPS address shown.
 
@@ -71,7 +74,7 @@ Now we need to use the HTTPS cloning address in RStudio. Click File > New Projec
 
 Paste the HTTPS clone address into the Repository URL field. It is best to not change the Project Directory Name - it will be same as the GitHub repo name by default. You can of course choose the location in your local file structure where you want to save the project via the Browse button. It is also preferable to check the Open in a New Session Option. That's it - now click the Create Project button. RStudio will create your project and download all the content from GitHub.
 
-### Working in RStudio with Git/GitHub Integration
+# Working in RStudio with Git/GitHub Integration
 
 Now that you have a Project with Git/GitHub integration, you should have a Git tab available to you in RStudio. There are three buttons of importance and immediate use for you: `Commit`, Down Arror (or `Pull`) and Up Arrow (or `Push`).
 
@@ -87,14 +90,18 @@ That's it. You have now managed to `Push` your changes to GitHub and `Pull` the 
 
 There you have it - your GitHub Repository is now updated.
 
-#### Collaborating with Your Team
+## Collaborating with Your Team
+
+Well - you can work with RStudio + Git/GitHub - but that was not the point. We wanted to build a collaboration platform. Not to worry - it is easy to allow your team access to your repository and allow them to clone your repo, make changes to your repo and push/pull as needed. You just need to add your team as `Collaborator` to your GitHub repo. 
+
+Go to your GitHub repo page, select Settings > Manage Access > Invite a Collaborator. There you will be able to add collaborators using their GitHub username, full name or email address. People you invite will get an email invitation to join your repo - once they accept then they will have full access to your repo and they will be able to contribute to the shared repo.
 
 
-### Surely There is More to This?
+# Surely There is More to This?
 
 Yes. Unfortunately. Things with Git and GitHub tend to get too complicated too soon. You will run into issues. I am addressing the most common issues below - rest will have to wait for the next update of this document.
 
-#### EMail Address Not Matching
+## EMail Address Not Matching
 
 This is the most common issue I see my students facing. If you get an error message on these lines, then you can use the code below to fix it. Remember that this code needs to be run in the Command Line of your Operating System. Easiest way to do that is to use the `Terminal` tab in your RStudio Project - as shown below:
 
@@ -105,3 +112,4 @@ The command typed above shown below. Of course, make sure that the email address
 git config --global user.email "email@example.com"
 ```
 
+***
