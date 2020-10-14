@@ -40,7 +40,21 @@ We need to make sure that our RStudio session is set up to work with Git/GitHub.
 
 In my RStudio session, the dialog box looks like the following:
 
-![Global Options Setup for RStudio](GlobalOptions.JPG)
+![Global Options Setup for RStudio](GlobalOptions.JPG){width=50%}
 
 
-It is important to note that RStudio's Git/GitHub functionality is tied to the idea of a "RStudio Project". Each project is a self contained unit that lives in a specific folder. The project folder has a git repository that can be synced with a cloud based remote repository. 
+## Easiest Path to a GitHub + RStudio Integration
+
+It is important to note that RStudio's Git/GitHub functionality is tied to the idea of a "RStudio Project". Each project is a self contained unit that lives in a specific folder. The project folder has a git repository that can be synced with a cloud based remote repository. The easiet path to creating a RStudio Project that is synced with GitHub is follow the step by step process explained below.
+
+### Create an Empty Repository in GitHub
+
+- Sign into GitHub and click the button for creating a new repository
+
+![Create Empty Repository in GitHub](CreateRepo.PNG){width=50%}
+
+
+- Provide a repository name. I am using the name `TestRepo` in the example image above
+- Choose either `Public` or `Private` as your repository's access level. If you are unsure, choose `Public`
+- Choose the option for `Add a Readme File` so that you have some material in your repo and its not *completely* empty
+
